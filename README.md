@@ -1,6 +1,7 @@
 Advent of code repository 2020
 
 * Finished problems:
+
 [x] Day 1
 
 [ ] Day 2

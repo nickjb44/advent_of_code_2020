@@ -6,7 +6,7 @@ Advent of code repository 2020
 
 [x] Day 2
 
-[ ] Day 3
+[x] Day 3
 
 [ ] Day 4
 

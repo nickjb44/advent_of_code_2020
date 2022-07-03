@@ -15,5 +15,4 @@ def get_n_trees(forest_file):
     return n_trees
 
 print(get_n_trees("example.txt"))
-
 print(get_n_trees("forest_path.txt"))

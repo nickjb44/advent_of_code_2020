@@ -1,6 +1,6 @@
 import math
 
-def get_n_trees(forest_file,right, down):
+def get_n_trees(forest_file, right, down):
     """
     This function will read in the file and check for tree vs open for each visited cell
     If it is a tree it will add to the running total of visited trees
@@ -20,8 +20,9 @@ def get_n_trees(forest_file,right, down):
 def get_product_of_trees(file, movement_instructions):
     """
     this takes the path to a file and a list of dictionaries for right and down instructions
+    it then calculates and returns the product of the trees observed for each movement path
     """
-    trees_found = [get_n_trees(file, movement_instruction["right"], movement_instruction["down"]) for movement_instruction in movement_instructions]
+    trees_found = [get_n_trees(file, **movement_instruction) for movement_instruction in movement_instructions]
     return math.prod(trees_found)
 
 

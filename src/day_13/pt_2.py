@@ -40,17 +40,16 @@ def recursively_find_time(current_time, buses_and_offset, current_step_size):
             buses_and_offset.pop(i)
 
     if len(buses_and_offset) == 0:
-        print(f"answer is {current_time}")
+        print(f"length of list is {len(buses_and_offset)} and i is {i}. time is {current_time} and step size is {current_step_size}")
         return current_time
     else:
-        recursively_find_time(current_time + current_step_size, buses_and_offset, current_step_size)
+        return recursively_find_time(current_time + current_step_size, buses_and_offset, current_step_size)
 
  
 def find_when_celestial_buses_align(file):
     bus_info = parse_input(file)
 
-    answer = recursively_find_time(bus_info["start_time"], bus_info["buses_and_offset"], 1)
-    print(f"again, answer is {answer}")
+    return recursively_find_time(bus_info["start_time"], bus_info["buses_and_offset"], 1)
 
-print(find_when_celestial_buses_align("./input.txt"))
+print(f"the answer is {find_when_celestial_buses_align('./input.txt')}")
 
